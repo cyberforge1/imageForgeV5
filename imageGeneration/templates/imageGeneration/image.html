@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Images</title>
+  </head>
+  <body>
+    <h1>Images</h1>
+    {% for image in image %}
+    <div>
+      <p>Added on: {{ image.get_datetime }}</p>
+      <p>{{ image.get_text }}</p>
+      <img src="{{ image.get_image_url }}" alt="Image" />
+    </div>
+    {% endfor %}
+  </body>
+</html>
