@@ -1,16 +1,30 @@
-{% extends 'learning_logs/base.html' %}
+{% extends 'learning_logs/base.html' %} {% block page_header %}
+<div class="p-3 mb-4 bg-light border rounded-3">
+  <div class="container-fluid py-4">
+    <h1 class="display-3">Welcome to imageForge!</h1>
 
-{% block page_header %}
-  <div class="p-3 mb-4 bg-light border rounded-3">
-    <div class="container-fluid py-4">
-      <h1 class="display-3">Track your learning.</h1>
-      
-      <p class="lead">Make your own Learning Log, and keep a list of the
-      topics you're learning about. Whenever you learn something new
-      about a topic, make an entry summarizing what you've learned.</p>
+    <p class="lead">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam malesuada
+      massa nec orci volutpat, non luctus lacus efficitur. Ut vitae nunc velit.
+      Nam vulputate pellentesque leo, vel pharetra neque eleifend at. Mauris ac
+      dolor ut metus convallis luctus. Nunc finibus orci ipsum, id bibendum
+      lacus posuere in. Vestibulum at justo felis. Fusce eget enim nec est
+      aliquam dignissim a a ligula. Integer id ipsum turpis.
+    </p>
 
-      <a class="btn btn-primary btn-lg mt-1"
-          href="{% url 'accounts:register' %}">Register &raquo;</a>
-    </div>
+    <a class="btn btn-primary btn-lg mt-1" href="{% url 'accounts:register' %}"
+      >Register &raquo;</a
+    >
   </div>
+</div>
+
+<div
+  class="d-flex justify-content-center align-items-center"
+  style="height: 20vh"
+>
+  <form method="POST" action="{% url 'learning_logs:generation' %}">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-success btn-lg mt-1">GENERATE</button>
+  </form>
+</div>
 {% endblock page_header %}

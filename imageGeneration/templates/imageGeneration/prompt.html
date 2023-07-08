@@ -1,6 +1,11 @@
-<html>
+{% extends 'learning_logs/base.html' %} {% block page_header %}
+<h1>User History</h1>
+{% endblock page_header %} {% block content %}
+
+<html lang="en">
   <head>
-    <title>Prompts</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <h1>Prompts</h1>
@@ -12,3 +17,5 @@
     {% endfor %}
   </body>
 </html>
+
+{% endblock content %}

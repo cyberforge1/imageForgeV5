@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Prompt, Image
+from django.contrib.auth.decorators import login_required
 
 
 def prompt(request):
